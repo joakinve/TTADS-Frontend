@@ -1,0 +1,9 @@
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+  }
+
+.main {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
