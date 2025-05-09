@@ -158,7 +158,6 @@ export class PedidosDialogComponent implements OnInit {
   }
 
   cargarFormulario() {
-    console.log(this.data.elemento)
     const pedido: PedidoForm = {
       productos: this.data.elemento?.lista_productos,
       montoImporte: this.data.elemento?.montoImporte as number,
@@ -228,9 +227,7 @@ export class PedidosDialogComponent implements OnInit {
     const productoSeleccionado = this.lista_productos.find(
       (p) => p.id_producto === value
     )
-    console.log(productoSeleccionado)
     this.productosSeleccionados[index] = productoSeleccionado
-
     const control = this.productos.at(index).get('precio')
     control?.setValue(productoSeleccionado.precio)
   }

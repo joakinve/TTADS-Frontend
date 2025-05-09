@@ -90,7 +90,6 @@ export class RegisterComponent {
         }
         this._authService.register(usuario).subscribe({
           next: (res: any) => {
-            console.log(res.msg)
             const dialogRef = this.dialog.open(DialogComponent, {
               width: '375px',
               autoFocus: true,

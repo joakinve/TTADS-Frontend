@@ -22,7 +22,6 @@ export class CardTipoProductoComponent implements OnInit {
       const cookie = this._cookieService.get('ClienteMesa')
       if (cookie) {
         const [id_usuario, id_mesa] = cookie.split(':')
-        console.log(id_usuario)
         this.urlMesa = parseInt(id_mesa)
       } else {
         this.urlMesa = 0

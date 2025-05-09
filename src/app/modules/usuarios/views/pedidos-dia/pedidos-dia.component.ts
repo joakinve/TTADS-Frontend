@@ -70,7 +70,6 @@ export class PedidosDiaComponent implements OnInit {
         })
       )
       .subscribe({
-        next: () => console.log(this.pedidos),
         error: (err) =>
           console.error(`Código de error ${err.status}: `, err.error.msg)
       })

@@ -184,7 +184,6 @@ export class ProductosComponent implements OnInit, AfterViewInit {
     this._mesaService.getOneMesa(Number(id)).subscribe({
       next: (res: any) => {
         this.mesa = res
-        console.log(res) // Este console.log muestra la mesa traída desde el back (Ver en consola del navegodor)
       },
       error: (err: any) => {
         console.error(`Código de error ${err.status}: `, err.error.msg)
@@ -304,7 +303,7 @@ export class ProductosComponent implements OnInit, AfterViewInit {
   // Almacenar en el carrito[] todos los productos de cada lista que tengan cant > 0 para pasar al modulo de carrito
   onSubmit(observacion: string) {
     this.carrito = this.productos.filter((p) => p.cant_selecc > 0)
-    console.log(this.carrito)
+
     const carrito = this.carrito
     // Muestra un dialog para confirmar el Pedido, mostrando los productos seleccionados con sus cantidades y la observación ingresada
     const dialogRef = this.dialog.open(DialogConfirmPedidoComponent, {
@@ -337,11 +336,8 @@ export class ProductosComponent implements OnInit, AfterViewInit {
               //   const nuevoPedido = this.carrito
               //   this.carrito = JSON.parse(pedidoViejo)
               //   this.carrito.push(...nuevoPedido)
-              //   console.log('Nueva lista: ', this.carrito)
               // }
               // localStorage.setItem('carrito', JSON.stringify(this.carrito)) //Para ver el localStorage ir al inspeccionar del buscador - Aplicación - Almacenamiento local
-
-              console.log(res)
               //Mostar detalles del pedido (productos seleccionados con sus cants)
               const dialogRef = this.dialog.open(DialogComponent, {
                 width: '375px',

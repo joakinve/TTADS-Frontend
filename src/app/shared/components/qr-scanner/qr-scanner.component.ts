@@ -72,7 +72,6 @@ export class QrScannerComponent implements AfterViewInit {
   onQRCodeScanned(content: string) {
     const usuario = this._authService.getCurrentUserId()
     const mesa = content.slice(12)
-    console.log('Código QR escaneado:', content)
     this._cookieService.set('ClienteMesa', `${usuario}:${mesa}`) // ClienteMesa = nombre de la cookie, clickear en mostrar decoficado por URL en 'Aplicacion' en Google Chrome
     this.dialogRef.close({ data: content })
   }

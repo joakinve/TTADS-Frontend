@@ -46,7 +46,6 @@ export class DialogEditarPerfilComponent implements OnInit {
   })
 
   ngOnInit() {
-    console.log(this.data)
     this.cargarFormulario()
   }
 

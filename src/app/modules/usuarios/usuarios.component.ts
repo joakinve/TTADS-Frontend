@@ -41,7 +41,6 @@ export class UsuariosComponent {
 
   changeUserOption(opcion: number) {
     this.userOption = opcion
-    console.log(this.userOption)
   }
 
   desplegarBarra() {

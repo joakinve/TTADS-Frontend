@@ -80,8 +80,6 @@ export class CrearMenuDialogComponent implements OnInit {
         (p: any) => p.id_producto
       )
     }
-    console.log(this.productos)
-    console.log(menu)
     this.formulario.patchValue({
       producto: menu.lista_productos,
       titulo: menu.titulo

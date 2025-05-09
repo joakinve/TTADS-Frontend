@@ -37,7 +37,6 @@ export class ResumenesComponent implements OnInit {
         })
       )
       .subscribe({
-        next: () => console.log(this.datosTabla),
         error: (err: any) =>
           console.error(`Código de error ${err.status}: `, err.error.msg)
       })

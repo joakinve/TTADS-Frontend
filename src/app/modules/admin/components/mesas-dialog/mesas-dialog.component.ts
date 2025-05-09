@@ -67,13 +67,10 @@ export class MesasDialogComponent implements OnInit {
 
   generarQR() {
     if (this.data.elemento.qr !== '') {
-      console.log('NO HAGO NADA')
-    } else {
       this._mesaService
         .generarQR(this.data.elemento.id_mesa)
         .then((qrCodeUrl: string) => {
           // Realizar acciones adicionales si es necesario
-          console.log('Código QR generado:', qrCodeUrl)
           // const base64Image = qrCodeUrl.replace(
           //   /^data:image\/(png|jpeg|jpg);base64,/,
           //   ''

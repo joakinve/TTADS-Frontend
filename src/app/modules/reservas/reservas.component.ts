@@ -209,7 +209,6 @@ export class ReservasComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formulario.controls)
     if (this.formulario.valid) {
       const reserva: ReservaPOST = {
         fechaHora:

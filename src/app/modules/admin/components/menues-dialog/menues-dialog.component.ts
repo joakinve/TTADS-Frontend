@@ -87,8 +87,7 @@ export class MenuesDialogComponent implements OnInit {
       //    p.id_producto
       // )  2° opción: Es lo mismo que la sentencia anterior
     }
-    console.log(this.productos)
-    console.log(menu)
+
     this.formulario.patchValue({
       producto: menu.lista_productos,
       titulo: menu.titulo,
@@ -102,7 +101,6 @@ export class MenuesDialogComponent implements OnInit {
 
   onSubmit() {
     if (this.formulario.valid) {
-      console.log(this.formulario.value.producto)
       const menu: MenuPOST = {
         titulo: this.formulario.value.titulo as string,
         id_usuario: this.formulario.value.usuario as number,

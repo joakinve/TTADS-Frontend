@@ -75,7 +75,6 @@ export class ProductosDialogComponent implements OnInit {
       tipoProducto: this.data.elemento?.id_tipoProducto as number,
       detalle: this.data.elemento?.detalle as string
     }
-    console.log(producto)
     this.formulario.patchValue({
       descripcion: producto.descripcion,
       imagen: producto.imagen,

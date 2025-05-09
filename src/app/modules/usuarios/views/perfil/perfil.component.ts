@@ -78,7 +78,6 @@ export class PerfilComponent implements AfterContentInit {
     })
     dialogRef.afterClosed().subscribe((resultado) => {
       if (resultado) {
-        console.log(resultado)
         this._usuariosService
           .modificarPerfil(this.usuarioInfo.id_usuario, resultado.data)
           .subscribe({

@@ -153,7 +153,6 @@ export class PromocionesComponent implements OnInit {
       data: dataDialog
     })
     dialogRef.afterClosed().subscribe((resultado) => {
-      console.log(resultado)
       if (resultado) {
         this._promocionService.createPromocion(resultado.data).subscribe({
           // next - error - complete

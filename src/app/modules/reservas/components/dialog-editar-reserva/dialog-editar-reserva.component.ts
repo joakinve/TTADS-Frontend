@@ -85,7 +85,6 @@ export class DialogEditarReservaComponent implements OnInit {
   }
 
   detectarCambios() {
-    // console.log(this.mesas)
     // this.mesaSeleccionada = this.mesas.find(
     //   (m) => m.id_mesa === this.data.reserva.id_reserva
     // )
