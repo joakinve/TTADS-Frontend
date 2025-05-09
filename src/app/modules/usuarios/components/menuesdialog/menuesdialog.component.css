@@ -12,13 +12,6 @@
     min-height: 30vh;
 }
 
-/* .reserva-content {
-    display: flex;
-    flex-direction: column;
-    min-width: 30vw; 
-    max-width: 40vw;
-  } */
-  
 .reserva-content h1 {
     font-weight: 600;
     font-size: 45px;
