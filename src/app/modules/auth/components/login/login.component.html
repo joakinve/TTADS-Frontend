@@ -1,4 +1,4 @@
-<div class="login">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 88vh;">
     <form [formGroup]="formulario" class="login-content mat-elevation-z6" (ngSubmit)="onSubmit()">
       <h1>INICIAR SESIÓN</h1>
       <div class="filaFormulario">
@@ -29,11 +29,11 @@
       
     <button type="submit" mat-flat-button color="primary" class="login-submit" tabindex="3">Iniciar sesión</button>
     <p>
-      <a mat-flat-button class="boton" (click)="onClick(3)" tabindex="4">¿Olvidaste tu contraseña?</a>
+      <a mat-flat-button class="d-flex justify-content-center text-white bg-dark-custom"(click)="onClick(3)" tabindex="4">¿Olvidaste tu contraseña?</a>
     </p>
       
       <section class="login-redirect">
-        <a class="boton" mat-flat-button (click)="onClick(2)" tabindex="4">¿No tienes una cuenta? Registrate</a>
+        <a class="d-flex justify-content-center text-white bg-dark-custom"  mat-flat-button (click)="onClick(2)" tabindex="4">¿No tienes una cuenta? Registrate</a>
       </section>
     </form>
   </div>
