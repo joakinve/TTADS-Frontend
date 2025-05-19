@@ -14,7 +14,7 @@
     </ng-template>
     
     <ng-container *ngIf="this._authService.loggedIn(); else noLogueado">
-      <div class="pc">
+      <div class="display-desktop">
         <!-- Renderiza el boton solo para la vista de Usuario  -->
         <a *ngIf="this._authService.getRol() === 2" mat-button routerLink="/reservas"><mat-icon>event</mat-icon>Reservar</a>
       
@@ -28,10 +28,10 @@
         <a mat-raised-button color="warn" (click)="logout()" routerLink="/"> <mat-icon>power_settings_new</mat-icon>Cerrar sesión</a>
       </div>
 
-      <button class="celular" mat-icon-button [matMenuTriggerFor]="menu">
+      <button class="display-phone" mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>
       </button>
-      <mat-menu #menu="matMenu" class="celular">
+      <mat-menu #menu="matMenu" class="display-phone">
         <p>
           <a *ngIf="this._authService.getRol() === 2" mat-button routerLink="/reservas"><mat-icon>event</mat-icon>Reservar</a>
         </p>

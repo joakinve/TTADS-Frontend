@@ -8,6 +8,10 @@
   font-size: 13px;
 }
 
+.mdc-data-table__cell, .mdc-data-table__header-cell{
+  padding: 0 8px;
+}
+
 .mat-mdc-header-cell, .mat-mdc-cell, .mat-cell, .mat-mdc-sort-header { 
   text-align: center;
   color: rgb(255, 255, 255);
@@ -47,3 +51,14 @@
   }
 
 } 
+
+
+.mat-column-Descripci-n {
+  width: 400px;
+  text-align: center;
+}
+
+.mat-column-Precio-unitario,.mat-column-Cantidad-seleccionada {
+  width: 250px;
+}
+

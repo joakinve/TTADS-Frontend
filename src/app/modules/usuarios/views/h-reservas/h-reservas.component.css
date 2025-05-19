@@ -17,10 +17,6 @@
   padding-inline: 1%;
 }
 
-.pc {
-  display: none;
-}
-
 @media only screen and (min-width: 992px) {
   .titulo {
     font-size: 35px;
@@ -29,13 +25,5 @@
   .tabla {
     padding-bottom: 5%;
     padding-inline: 5%;
-  }
-  
-  .pc {
-    display: block;
-  }
-
-  .celular {
-    display: none;
   }
 } 

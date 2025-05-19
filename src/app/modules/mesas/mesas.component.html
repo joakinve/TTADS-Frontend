@@ -37,22 +37,22 @@
             </h2>
           </div>
           <mat-card-actions align="end">
-            <button class="button-pc button" (click)="cambiarEstado(mesa)">
+            <button class="button display-desktop" (click)="cambiarEstado(mesa)">
               {{ mesa.habilitada? 'Deshabilitar': 'Habilitar'}}
             </button>
 
-            <div class="button-celular">
-            <ng-container *ngIf="mesa.habilitada; else deshabilitada">
-              <button class="button" (click)="cambiarEstado(mesa)">
-                <mat-icon>close</mat-icon>
-              </button>
-            </ng-container> 
+            <div class="display-phone">
+              <ng-container *ngIf="mesa.habilitada; else deshabilitada">
+                <button class="button" (click)="cambiarEstado(mesa)">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </ng-container> 
 
-            <ng-template #deshabilitada>
-              <button class="button" (click)="cambiarEstado(mesa)">
-                <mat-icon>check</mat-icon>
-              </button>
-            </ng-template>
+              <ng-template #deshabilitada>
+                <button class="button" (click)="cambiarEstado(mesa)">
+                  <mat-icon>check</mat-icon>
+                </button>
+              </ng-template>
           </div>
           </mat-card-actions>
         </mat-card>
