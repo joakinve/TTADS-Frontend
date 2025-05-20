@@ -303,14 +303,11 @@ export class ProductosComponent implements OnInit, AfterViewInit {
   // Almacenar en el carrito[] todos los productos de cada lista que tengan cant > 0 para pasar al modulo de carrito
   onSubmit(observacion: string) {
     this.carrito = this.productos.filter((p) => p.cant_selecc > 0)
-
     const carrito = this.carrito
     // Muestra un dialog para confirmar el Pedido, mostrando los productos seleccionados con sus cantidades y la observación ingresada
     const dialogRef = this.dialog.open(DialogConfirmPedidoComponent, {
       width: '600px',
       data: { carrito, observacion }
-      // data: this.confirmDialogMsg
-      // data: { msg: element.productos }
     })
     dialogRef.afterClosed().subscribe((res) => {
       if (res) {
@@ -331,13 +328,6 @@ export class ProductosComponent implements OnInit, AfterViewInit {
           }
           this._pedidoService.createPedido(pedido).subscribe({
             next: (res: any) => {
-              // if (localStorage.getItem('carrito') !== null) {
-              //   const pedidoViejo = localStorage.getItem('carrito') as string
-              //   const nuevoPedido = this.carrito
-              //   this.carrito = JSON.parse(pedidoViejo)
-              //   this.carrito.push(...nuevoPedido)
-              // }
-              // localStorage.setItem('carrito', JSON.stringify(this.carrito)) //Para ver el localStorage ir al inspeccionar del buscador - Aplicación - Almacenamiento local
               //Mostar detalles del pedido (productos seleccionados con sus cants)
               const dialogRef = this.dialog.open(DialogComponent, {
                 width: '375px',
@@ -356,17 +346,6 @@ export class ProductosComponent implements OnInit, AfterViewInit {
         // this.deleteAction.emit(element)
       }
     })
-
-    // const dialogRef = this.dialog.open(DialogComponent, {
-    //   width: '300 px',
-    //   data: {
-    //     title: 'Eliminar usuario',
-    //     msg: res.msg
-    //   }
-    // })
-    // dialogRef.afterClosed().subscribe(() => {
-    //   window.location.href = '/admin/usuarios'
-    // })
   }
 
   calculaMonto(): number {

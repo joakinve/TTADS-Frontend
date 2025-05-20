@@ -36,10 +36,6 @@ a {
     color: rgb(255, 255, 255);
 }
 
-.pc {
-    display: none;
-}
-
 @media only screen and (min-width: 992px) {
     .main {
         min-height: 64vh;
@@ -61,11 +57,4 @@ a {
         right: 0;
     }
 
-    .pc {
-        display: block;
-    }
-
-    .celu {
-        display: none;
-    }
 } 

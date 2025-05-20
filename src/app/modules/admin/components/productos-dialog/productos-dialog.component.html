@@ -6,7 +6,7 @@
         <div class="reserva">
           <form [formGroup]="formulario" class="reserva-content" (submit)="onSubmit()">
   
-            <div class="filaFormulario">
+            <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
               <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input" > 
                 <mat-label>Descripcion del producto</mat-label>
                 <input type="text" matInput formControlName="descripcion">
@@ -28,7 +28,7 @@
               </mat-form-field>
             </div> 
 
-            <div class="filaFormulario">
+            <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
               <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input">
                   <mat-label>Precio del producto</mat-label>
                   <input type="number" min="0" matInput formControlName="precio">
@@ -46,7 +46,7 @@
                 </mat-form-field>
               </div>
 
-              <div class="filaFormulario">
+              <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
                 <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input imagen detalle">
                   <mat-label>Detalle del producto</mat-label>
                   <textarea matInput formControlName="detalle"></textarea>
@@ -56,7 +56,7 @@
                 </mat-form-field>
               </div>
 
-              <div class="filaFormulario">
+              <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
                 <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input imagen">
                   <mat-label>Imagen del producto</mat-label>
                   <input type="text" matInput formControlName="imagen">
@@ -66,7 +66,7 @@
                 </mat-form-field>
               </div>
               
-          <div class="boton">
+          <div class="d-flex justify-content-evenly">
             <button type="submit" mat-raised-button color="primary">Confirmar</button>
             <button type="button" mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>
           </div>

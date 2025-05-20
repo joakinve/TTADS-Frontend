@@ -63,10 +63,6 @@
   font-size: large;
 }
 
-.button-pc {
-  display: none;
-}
-
 @media only screen and (min-width: 992px) {
   .titulo {
     font-size: 35px;
@@ -82,13 +78,5 @@
   
   .button {
     height: 8vh;
-  }
-
-  .button-celular {
-    display: none;
-  }
-
-  .button-pc {
-    display: block;
   }
 } 

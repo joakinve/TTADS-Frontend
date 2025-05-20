@@ -78,14 +78,6 @@ export class MenuesDialogComponent implements OnInit {
       lista_productos: this.data.elemento.lista_productos.map(
         (p: any) => p.id_producto
       )
-      // lista_productos: this.data.elemento?.lista_productos.map((p: any) => ({
-        // id_producto: p.id_producto,
-        // id_producto: p.id_producto,
-        // descripcion: p.descripcion
-      // })) // 1° opción
-      // lista_productos: this.data.elemento?.lista_productos.map((p: any) =>
-      //    p.id_producto
-      // )  2° opción: Es lo mismo que la sentencia anterior
     }
 
     this.formulario.patchValue({

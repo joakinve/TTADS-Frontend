@@ -6,7 +6,7 @@
       <div class="reserva">
         <form [formGroup]="formulario" class="reserva-content" (ngSubmit)="onSubmit()">
 
-          <div class="filaFormulario" formGroupName="fechaHoraCantidad">
+          <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;" formGroupName="fechaHoraCantidad">
             <mat-form-field appearance="fill" floatLabel="auto" [hideRequiredMarker]="data.editar" class="reserva-input fechaHora">
               <mat-label>Seleccionar fecha</mat-label>
               <input
@@ -39,7 +39,7 @@
             </mat-form-field>
           </div>
 
-          <div class="filaFormulario" formGroupName="fechaHoraCantidad">
+          <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;" formGroupName="fechaHoraCantidad">
             <mat-form-field  appearance="fill" floatLabel="auto" [hideRequiredMarker]="data.editar" class="reserva-input cantidad-input">
               <mat-label>Ingresar cantidad de personas</mat-label>
               <!-- <input matInput type="number" formControlName="cantidad"> -->
@@ -56,7 +56,7 @@
             </mat-form-field>
           </div>
 
-          <div class="filaFormulario">
+          <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
             <mat-form-field appearance="fill" floatLabel="auto" [hideRequiredMarker]="data.editar" class="reserva-input fechaHora">
               <mat-label>Seleccionar usuario</mat-label>
               <mat-select formControlName="usuario">
@@ -88,7 +88,7 @@
             </mat-checkbox>
           </div>
 
-        <div class="boton">
+        <div class="d-flex justify-content-evenly">
           <button type="submit" mat-raised-button color="primary">
             Confirmar
           </button>

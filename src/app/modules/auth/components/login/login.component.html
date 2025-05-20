@@ -1,8 +1,8 @@
-<div class="login">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 88vh;">
     <form [formGroup]="formulario" class="login-content mat-elevation-z6" (ngSubmit)="onSubmit()">
       <h1>INICIAR SESIÓN</h1>
-      <div class="filaFormulario">
-        <mat-form-field appearance="outline" class="login-input">
+      <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
+        <mat-form-field appearance="outline" class="login-input" style="color: #fff;">
           <mat-label>Ingresar email</mat-label>
           <input matInput formControlName="email" placeholder="Email" tabindex="1">
           <mat-error *ngIf="formulario.controls.email.hasError('required')">Campo obligatorio.</mat-error>
@@ -11,8 +11,8 @@
           <mat-error *ngIf="formulario.controls.email.hasError('maxlength')">El email debe contener máximo 100 caracteres</mat-error>
       </mat-form-field>
       </div>
-      <div class="filaFormulario">
-        <mat-form-field appearance="outline" class="login-input">
+      <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
+        <mat-form-field appearance="outline" class="login-input" style="color: #fff;">
           <mat-label>Ingresar contraseña</mat-label>
           <input matInput [type]="ocultar ? 'password' : 'text'" formControlName="contrasenia" placeholder="Contraseña" tabindex="2">
           <button type="button" mat-icon-button matSuffix (click)="ocultar = !ocultar" [attr.aria-label]="'Ocultar contraseña'" [attr.aria-pressed]="ocultar" tabindex="-1">
@@ -29,11 +29,11 @@
       
     <button type="submit" mat-flat-button color="primary" class="login-submit" tabindex="3">Iniciar sesión</button>
     <p>
-      <a mat-flat-button class="boton" (click)="onClick(3)" tabindex="4">¿Olvidaste tu contraseña?</a>
+      <a mat-flat-button class="d-flex justify-content-center text-white bg-dark-custom"(click)="onClick(3)" tabindex="4">¿Olvidaste tu contraseña?</a>
     </p>
       
       <section class="login-redirect">
-        <a class="boton" mat-flat-button (click)="onClick(2)" tabindex="4">¿No tienes una cuenta? Registrate</a>
+        <a class="d-flex justify-content-center text-white bg-dark-custom"  mat-flat-button (click)="onClick(2)" tabindex="4">¿No tienes una cuenta? Registrate</a>
       </section>
     </form>
   </div>

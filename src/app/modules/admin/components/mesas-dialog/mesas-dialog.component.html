@@ -2,11 +2,11 @@
     <!-- Comprueba que data.accion sea 'editar' o 'agregar' y muestra el Título correspondiente -->
     <h1 class="titulo">{{data.editar ? 'Modificar' : 'Agregar'}} mesa</h1>
   
-      <div mat-dialog-content class="reserva">
-        <div class="reserva">
+      <div mat-dialog-content class="d-flex justify-content-center p-0" style="min-height: 30vh">
+        <div class="d-flex justify-content-center p-0" style="min-height: 30vh">
           <form [formGroup]="formulario" class="reserva-content" (submit)="onSubmit()">
   
-            <div class="filaFormulario">
+            <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
               <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input">
                 <mat-label>Capacidad de la mesa</mat-label>
                 <input type="number" min="2" max="6" matInput formControlName="capacidad">
@@ -23,19 +23,19 @@
               </mat-form-field>
             </div>
 
-            <div *ngIf="data.editar" class="filaFormulario">
+            <div *ngIf="data.editar" class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
               <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input qr">
                 <mat-label>Código QR de la mesa</mat-label>
                 <input type="text" matInput formControlName="qr" readonly>
               </mat-form-field>
             </div>
 
-            <div class="filaFormulario botones-qr">
+            <div class="d-flex flex-row align-items-center justify-content-evenly" style="padding-inline: 2%; margin-bottom: 3%;">
               <button *ngIf="data.editar" type="button" mat-raised-button color="accent" (click)="generarQR()">Generar Código QR</button>
               <button *ngIf="data.editar" type="button" mat-raised-button color="accent" (click)="eliminarQR()">Limpiar Código QR</button>
             </div>
 
-          <div class="boton">
+          <div class="d-flex justify-content-evenly">
             <button type="submit" mat-raised-button color="primary">Confirmar</button>
             <button type="button" mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>
           </div>

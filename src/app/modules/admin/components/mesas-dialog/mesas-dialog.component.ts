@@ -71,10 +71,6 @@ export class MesasDialogComponent implements OnInit {
         .generarQR(this.data.elemento.id_mesa)
         .then((qrCodeUrl: string) => {
           // Realizar acciones adicionales si es necesario
-          // const base64Image = qrCodeUrl.replace(
-          //   /^data:image\/(png|jpeg|jpg);base64,/,
-          //   ''
-          // )
           this.formulario.patchValue({
             qr: qrCodeUrl
           })
@@ -90,8 +86,6 @@ export class MesasDialogComponent implements OnInit {
     if (this.data.elemento.qr !== '') {
       this.data.elemento.qr = ''
       this.formulario.patchValue({ qr: '' })
-    } else {
-      console.log('NO HAGO NADA')
     }
   }
 }

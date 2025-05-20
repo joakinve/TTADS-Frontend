@@ -37,8 +37,6 @@ export class MesasService {
     const opciones: object = {
       errorCorrectionLevel: 'Q',
       scale: 23,
-      // type: 'image/jpeg',
-      // quality: 0.3,
       margin: 2,
       color: {
         dark: '#292929',
