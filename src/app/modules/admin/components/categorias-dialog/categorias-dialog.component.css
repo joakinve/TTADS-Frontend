@@ -27,13 +27,6 @@
     margin-bottom: 5%;
   }
   
-  .filaFormulario {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 2%;
-  }
   
   mat-form-field {
     height: 76px;

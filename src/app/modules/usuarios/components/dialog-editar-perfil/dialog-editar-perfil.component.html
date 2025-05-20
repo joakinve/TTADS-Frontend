@@ -6,7 +6,7 @@
     <div class="reserva">
       <form [formGroup]="formulario" class="reserva-content" (ngSubmit)="onSubmit()">
 
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between w-100 w-lg-100">
           <mat-form-field  appearance="outline" floatLabel="auto" [hideRequiredMarker]="true" class="reserva-input">
             <mat-label>Cambiar nombre</mat-label>
             <input matInput type="text" formControlName="nombre">
@@ -24,7 +24,7 @@
           </mat-form-field>
         </div>
         
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between w-100 w-lg-100">
           <mat-form-field  appearance="outline" floatLabel="auto" [hideRequiredMarker]="true" class="reserva-input">
             <mat-label>Cambiar teléfono</mat-label>
             <input matInput type="text" formControlName="telefono">
