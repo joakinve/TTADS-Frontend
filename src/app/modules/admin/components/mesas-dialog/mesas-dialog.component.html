@@ -34,11 +34,9 @@
               <button *ngIf="data.editar" type="button" mat-raised-button color="accent" (click)="generarQR()">Generar Código QR</button>
               <button *ngIf="data.editar" type="button" mat-raised-button color="accent" (click)="eliminarQR()">Limpiar Código QR</button>
             </div>
-
-          <div class="boton">
-            <button type="submit" mat-raised-button color="primary">Confirmar</button>
-            <button type="button" mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>
-          </div>
+            <pa-form-buttons (cancelar)="onNoClick()">
+              
+            </pa-form-buttons>
         </form>
       </div>
   </div>

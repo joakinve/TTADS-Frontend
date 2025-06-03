@@ -46,12 +46,7 @@
               </mat-form-field>
             </div>
 
-          <div class="boton">
-            <button type="submit" mat-raised-button color="primary">
-              Confirmar pedido
-            </button>
-            <button type="button" mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>
-          </div>
+          <pa-form-buttons (cancelar)="onNoClick()"></pa-form-buttons>
           
         </form>
         

@@ -39,10 +39,7 @@
         ></pa-mesa-grid>
       </div>
 
-      <div class="boton">
-        <button type="submit" mat-raised-button color="primary">Confirmar</button>
-        <button mat-raised-button type="button" color="warn" (click)="onNoClick()">Cancelar</button>
-      </div>
+      <pa-form-buttons (cancelar)="onNoClick()"></pa-form-buttons>
     </form>
   </div>
 </div>
