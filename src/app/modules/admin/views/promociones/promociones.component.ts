@@ -9,6 +9,7 @@ import { DialogComponent } from '@pa/shared/components'
 import { PromocionesDialogComponent } from '../../components/promociones-dialog/promociones-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { PromocionTabla } from './models/promocion'
+import { BreakpointService } from '../../services/breakpoint.service'
 
 @Component({
   selector: 'pa-promociones',
@@ -27,7 +28,8 @@ export class PromocionesComponent implements OnInit {
 
   constructor(
     private _promocionService: PromocionesService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public breakpointService : BreakpointService
   ) {}
 
   ngOnInit(): void {

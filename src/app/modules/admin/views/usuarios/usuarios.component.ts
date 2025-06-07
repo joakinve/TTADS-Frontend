@@ -9,6 +9,7 @@ import { DialogComponent } from '@pa/shared/components'
 import { UsuariosDialogComponent } from '../../components/usuarios-dialog/usuarios-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { UsuarioTabla } from 'src/app/modules/usuarios/models/usuarios'
+import { BreakpointService } from '../../services/breakpoint.service'
 
 @Component({
   selector: 'pa-usuarios',
@@ -27,7 +28,8 @@ export class UsuariosComponent implements OnInit {
 
   constructor(
     private _usuarioService: UsuariosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public breakpointService : BreakpointService
   ) {}
 
   ngOnInit(): void {

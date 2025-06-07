@@ -7,6 +7,7 @@ import { DialogComponent } from '@pa/shared/components'
 import { MesasDialogComponent } from '../../components/mesas-dialog/mesas-dialog.component'
 import { MesaTabla } from '@pa/mesas/models'
 import { AdminDataDialog } from '../../models/adminDataDialog'
+import { BreakpointService } from '../../services/breakpoint.service'
 
 @Component({
   selector: 'pa-mesas',
@@ -15,15 +16,39 @@ import { AdminDataDialog } from '../../models/adminDataDialog'
 })
 export class MesasComponent implements OnInit {
   datosTabla: any = []
-  columnasPC: TableColumn[] = []
-  columnasCelu: TableColumn[] = []
-
+  columnasPC: TableColumn[] = [
+      { name: 'Nro.', dataKey: 'id_mesa' },
+      { name: 'Capacidad', dataKey: 'capacidad' },
+      { name: 'Ubicación', dataKey: 'ubicacion' },
+      { name: 'Código QR', dataKey: 'qr', isImage: true },
+      {
+        name: ' ',
+        dataKey: 'actionButtons',
+        editButton: true,
+        deleteButton: true
+      }
+    ]
+  columnasCelu: TableColumn[] = [
+      { name: 'Nro.', dataKey: 'id_mesa' },
+      { name: 'Capacidad', dataKey: 'capacidad' },
+      { name: 'Código QR', dataKey: 'qr', isImage: true },
+      {
+        name: ' ',
+        dataKey: 'actionButtons',
+        editButton: true,
+        deleteButton: true
+      }
+  ]
   msgConfirmacion = {
     title: 'Confirmar eliminación de la mesa',
     msg: '¿Estás seguro de eliminar la mesa? Esta acción no se puede deshacer.'
   }
-
-  constructor(private _mesaService: MesasService, public dialog: MatDialog) {}
+  
+  constructor(
+    private _mesaService: MesasService, 
+    public dialog: MatDialog,
+    public breakpointService : BreakpointService){
+    }
 
   ngOnInit(): void {
     this.cargarMesas()
@@ -47,30 +72,6 @@ export class MesasComponent implements OnInit {
         error: (err: any) =>
           console.error(`Código de error ${err.status}: `, err.error.msg)
       })
-    // Defino las columnas de la tabla mesas
-    this.columnasPC = [
-      { name: 'Nro.', dataKey: 'id_mesa' },
-      { name: 'Capacidad', dataKey: 'capacidad' },
-      { name: 'Ubicación', dataKey: 'ubicacion' },
-      { name: 'Código QR', dataKey: 'qr', isImage: true },
-      {
-        name: ' ',
-        dataKey: 'actionButtons',
-        editButton: true,
-        deleteButton: true
-      }
-    ]
-    this.columnasCelu = [
-      { name: 'Nro.', dataKey: 'id_mesa' },
-      { name: 'Capacidad', dataKey: 'capacidad' },
-      { name: 'Código QR', dataKey: 'qr', isImage: true },
-      {
-        name: ' ',
-        dataKey: 'actionButtons',
-        editButton: true,
-        deleteButton: true
-      }
-    ]
   }
 
   onDelete(mesa: any) {

@@ -3,14 +3,6 @@
   margin-bottom: 3%;
 }
 
-.tabla {
-  padding: 1%;
-  padding-bottom: 8%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
 
 .boton {
   display: flex;

@@ -30,3 +30,44 @@ body { margin: 0; font-family: 'Oswald', sans-serif; }
 a:link, a:visited {
   text-decoration: none;
 }
+
+.tabla {
+  padding: 1%;
+  padding-bottom: 8%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tabla-pc {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .tabla-celu {
+    display: none;
+  }
+
+  .tabla-pc {
+    display: block;
+  }
+} 
+
+.boton {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.boton button {
+  width: 30%;
+}
+
+
+.filaFormulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2%;
+}

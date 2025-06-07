@@ -43,11 +43,6 @@ mat-form-field.fechaHora {
   width: 49%;
 }
 
-.boton {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 .boton button {
   width: 41%;
 }

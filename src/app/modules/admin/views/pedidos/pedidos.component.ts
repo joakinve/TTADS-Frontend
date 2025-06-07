@@ -9,6 +9,7 @@ import { DialogComponent } from '@pa/shared/components'
 import { PedidosDialogComponent } from '../../components/pedidos-dialog/pedidos-dialog.component'
 import { PedidoTabla } from 'src/app/modules/pedidos/models/pedido'
 import { AdminDataDialog } from '../../models/adminDataDialog'
+import { BreakpointService } from '../../services/breakpoint.service'
 
 @Component({
   selector: 'pa-pedidos',
@@ -19,7 +20,6 @@ export class PedidosComponent implements OnInit {
   datosTabla: PedidoTabla[] = []
   columnasPC: TableColumn[] = []
   columnasCelu: TableColumn[] = []
-
   msgConfirmacion = {
     title: 'Confirmar eliminación del pedido',
     msg: '¿Estás seguro de eliminar el pedido? Esta acción no se puede deshacer.'
@@ -27,7 +27,8 @@ export class PedidosComponent implements OnInit {
 
   constructor(
     private _pedidoService: PedidosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public breakpointService : BreakpointService
   ) {}
 
   ngOnInit(): void {

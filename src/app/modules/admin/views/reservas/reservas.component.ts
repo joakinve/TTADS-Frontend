@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import * as moment from 'moment'
 import 'moment/locale/es'
 
-import { map } from 'rxjs'
+import { map, Observable } from 'rxjs'
 import { MatDialog } from '@angular/material/dialog'
 
 import { ReservaDataDialog } from '@pa/admin/models'
@@ -11,6 +11,7 @@ import { ReservasService } from '@pa/reservas/services'
 import { ReservaData, ReservaTabla } from '@pa/reservas/models'
 import { DialogComponent } from '@pa/shared/components'
 import { TableColumn } from '@pa/shared/models'
+import { BreakpointService } from '../../services/breakpoint.service'
 
 @Component({
   selector: 'pa-reservas',
@@ -18,18 +19,42 @@ import { TableColumn } from '@pa/shared/models'
   styleUrls: ['./reservas.component.css']
 })
 export class ReservasComponent implements OnInit {
-  datosTabla: ReservaTabla[] = []
-  columnasPC: TableColumn[] = []
-  columnasCelu: TableColumn[] = []
-
+  datosTabla: ReservaTabla[] = [];
+  isMobile!:boolean;
   msgConfirmacion = {
     title: 'Confirmar eliminación de la reserva',
     msg: '¿Estás seguro de eliminar la reserva? Esta acción no se puede deshacer.'
   }
+  columnasPC = [
+    { name: 'Nro.', dataKey: 'id_reserva' },
+    { name: 'Fecha y hora', dataKey: 'fechaHora' },
+    { name: 'Cantidad de personas', dataKey: 'cant_personas' },
+    { name: '¿Está pendiente?', dataKey: 'pendiente' },
+    { name: 'Usuario', dataKey: 'usuario' },
+    { name: 'Mesa', dataKey: 'mesa' },
+    {
+      name: ' ',
+      dataKey: 'actionButtons',
+      editButton: true,
+      deleteButton: true
+    }
+  ];
+  columnasCelu = [
+    { name: 'Fecha y hora', dataKey: 'fechaHora' },
+    { name: 'Cantidad de personas', dataKey: 'cant_personas' },
+    { name: 'Usuario', dataKey: 'usuario' },
+    {
+      name: ' ',
+      dataKey: 'actionButtons',
+      editButton: true,
+      deleteButton: true
+    }
+  ];
 
   constructor(
     private _reservaService: ReservasService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public breakpointService : BreakpointService
   ) {}
 
   ngOnInit(): void {
@@ -59,32 +84,36 @@ export class ReservasComponent implements OnInit {
         error: (err) =>
           console.error(`Código de error ${err.status}: `, err.error.msg)
       })
-    // Defino las columnas de la tabla Reservas
-    this.columnasPC = [
-      { name: 'Nro.', dataKey: 'id_reserva' },
-      { name: 'Fecha y hora', dataKey: 'fechaHora' },
-      { name: 'Cantidad de personas', dataKey: 'cant_personas' },
-      { name: '¿Está pendiente?', dataKey: 'pendiente' },
-      { name: 'Usuario', dataKey: 'usuario' },
-      { name: 'Mesa', dataKey: 'mesa' },
-      {
-        name: ' ',
-        dataKey: 'actionButtons',
-        editButton: true,
-        deleteButton: true
-      }
-    ]
-    this.columnasCelu = [
-      { name: 'Fecha y hora', dataKey: 'fechaHora' },
-      { name: 'Cantidad de personas', dataKey: 'cant_personas' },
-      { name: 'Usuario', dataKey: 'usuario' },
-      {
-        name: ' ',
-        dataKey: 'actionButtons',
-        editButton: true,
-        deleteButton: true
-      }
-    ]
+    // // Defino las columnas de la tabla Reservas
+    // this.columnasPC = [
+    //   { name: 'Nro.', dataKey: 'id_reserva' },
+    //   { name: 'Fecha y hora', dataKey: 'fechaHora' },
+    //   { name: 'Cantidad de personas', dataKey: 'cant_personas' },
+    //   { name: '¿Está pendiente?', dataKey: 'pendiente' },
+    //   { name: 'Usuario', dataKey: 'usuario' },
+    //   { name: 'Mesa', dataKey: 'mesa' },
+    //   {
+    //     name: ' ',
+    //     dataKey: 'actionButtons',
+    //     editButton: true,
+    //     deleteButton: true
+    //   }
+    // ]
+    // this.columnasCelu = [
+    //   { name: 'Fecha y hora', dataKey: 'fechaHora' },
+    //   { name: 'Cantidad de personas', dataKey: 'cant_personas' },
+    //   { name: 'Usuario', dataKey: 'usuario' },
+    //   {
+    //     name: ' ',
+    //     dataKey: 'actionButtons',
+    //     editButton: true,
+    //     deleteButton: true
+    //   }
+    // ]
+  }
+
+  get columnas() {
+    return this.isMobile ? this.columnasCelu : this.columnasPC;
   }
 
   onDelete(reserva: any) {

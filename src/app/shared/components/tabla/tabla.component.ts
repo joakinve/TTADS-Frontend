@@ -4,7 +4,7 @@ import {
   Input,
   ViewChild,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core'
 
 // Angular Material

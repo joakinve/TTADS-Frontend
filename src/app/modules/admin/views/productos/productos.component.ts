@@ -7,6 +7,7 @@ import { DialogComponent } from '@pa/shared/components'
 import { ProductosDialogComponent } from '../../components/productos-dialog/productos-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { ProductoPOST, ProductoTabla } from './models/producto'
+import { BreakpointService } from '../../services/breakpoint.service'
 
 @Component({
   selector: 'pa-productos',
@@ -22,10 +23,12 @@ export class ProductosComponent implements OnInit {
     title: 'Confirmar eliminación del producto',
     msg: '¿Estás seguro de eliminar el producto? Esta acción no se puede deshacer.'
   }
-
+  isMobile!:boolean;
+  
   constructor(
     private _productoService: ProductosService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public breakpointService : BreakpointService
   ) {}
 
   ngOnInit(): void {
