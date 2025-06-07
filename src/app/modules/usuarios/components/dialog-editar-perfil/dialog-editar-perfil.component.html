@@ -53,7 +53,12 @@
           <mat-error *ngIf="formulario.controls.contrasenia.hasError('maxlength')">La contraseña debe contener máximo 20 caracteres</mat-error>
         </mat-form-field>
         
-        <pa-form-buttons (cancelar)="onNoClick()"></pa-form-buttons>
+        <div class="boton">
+          <button type="submit" mat-raised-button color="primary">
+            Confirmar
+          </button>
+          <button type="button" mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>
+        </div>
         
       </form>
     </div>

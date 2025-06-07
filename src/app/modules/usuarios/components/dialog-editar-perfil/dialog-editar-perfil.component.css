@@ -26,6 +26,16 @@
   width: 100%;
 }
 
+.boton {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2%;
+}
+
+.boton button {
+  width: 30%;
+}
+
 .filaFormulario {
   display: flex;
   flex-direction: row;

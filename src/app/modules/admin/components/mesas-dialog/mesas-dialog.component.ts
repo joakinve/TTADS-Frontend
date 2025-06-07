@@ -65,44 +65,12 @@ export class MesasDialogComponent implements OnInit {
     }
   }
 
-  // generarQR() {
-  //   if (this.data.elemento.qr !== '') {
-  //     console.log('NO HAGO NADA')
-  //   } else {
-  //     this._mesaService
-  //       .generarQR(this.data.elemento.id_mesa)
-  //       .then((qrCodeUrl: string) => {
-  //         // Realizar acciones adicionales si es necesario
-  //         console.log('Código QR generado:', qrCodeUrl)
-  //         // const base64Image = qrCodeUrl.replace(
-  //         //   /^data:image\/(png|jpeg|jpg);base64,/,
-  //         //   ''
-  //         // )
-  //         this.formulario.patchValue({
-  //           qr: qrCodeUrl
-  //         })
-  //       })
-  //       .catch((error: any) => {
-  //         console.error(error)
-  //         // Manejar el error en caso de que ocurra
-  //       })
-  //   }
-  // }
-
-  // eliminarQR() {
-  //   if (this.data.elemento.qr !== '') {
-  //     this.data.elemento.qr = ''
-  //     this.formulario.patchValue({ qr: '' })
-  //   } else {
-  //     console.log('NO HAGO NADA')
-  //   }
-  // }
-
-    generarQR() {
-    if (this.data.elemento.qr === ''){
+  generarQR() {
+    if (this.data.elemento.qr !== '') {
       this._mesaService
         .generarQR(this.data.elemento.id_mesa)
         .then((qrCodeUrl: string) => {
+          // Realizar acciones adicionales si es necesario
           // const base64Image = qrCodeUrl.replace(
           //   /^data:image\/(png|jpeg|jpg);base64,/,
           //   ''
@@ -113,15 +81,17 @@ export class MesasDialogComponent implements OnInit {
         })
         .catch((error: any) => {
           console.error(error)
-
+          // Manejar el error en caso de que ocurra
         })
-    };
+    }
   }
 
   eliminarQR() {
-    if (this.data.elemento.qr !== ''){
+    if (this.data.elemento.qr !== '') {
       this.data.elemento.qr = ''
       this.formulario.patchValue({ qr: '' })
+    } else {
+      console.log('NO HAGO NADA')
     }
   }
 }

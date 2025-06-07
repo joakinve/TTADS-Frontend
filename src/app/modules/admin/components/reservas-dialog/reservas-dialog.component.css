@@ -40,7 +40,14 @@ mat-form-field {
   height: 76px;
 }
 
+.boton {
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.boton button {
+  width: 30%;
+}
 
 .dialog-checkbox {
   width: 100%;

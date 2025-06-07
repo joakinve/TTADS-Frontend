@@ -52,6 +52,15 @@ mat-form-field.fechaHora {
   align-items: center;
 }
 
+.boton {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.boton button {
+  width: 37%;
+}
+
  /* Límite hasta donde se puede desplazar la barra  */
 ::-webkit-scrollbar-track {
   background: rgb(255, 255, 255);

@@ -12,15 +12,13 @@ import { MaterialModule } from '@pa/shared/modules'
 import { MesaGridComponent } from '../../components/mesa-grid/mesa-grid.component'
 import { QrScannerComponent } from '../../components/qr-scanner/qr-scanner.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
-import { FormButtonsComponent } from '../../components/form-buttons/form-buttons.component'
 
 const components = [
   TablaComponent,
   DialogComponent,
   ConfirmDialogComponent,
   MesaGridComponent,
-  QrScannerComponent,
-  FormButtonsComponent
+  QrScannerComponent
 ]
 
 @NgModule({
