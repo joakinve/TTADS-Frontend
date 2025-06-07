@@ -10,28 +10,20 @@
     justify-content: center;
     min-height: 30vh;
     padding: 0%;
-  }
-  
-  .reserva-content {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 2%;
-    width: 387px;
-  }
-    
-  .reserva-input {
-    width: 49%;
-    margin-bottom: 5%;
-  }
-  
-  .filaFormulario {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 2%;
-  }
+}
 
+.reserva-content {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 2%;
+  width: 387px;
+}
+  
+.reserva-input {
+  width: 49%;
+  margin-bottom: 5%;
+}
+  
 .imagen {
     width: 100%;
 }
@@ -44,11 +36,4 @@ mat-form-field {
     height: 76px;
 }
   
-.boton {
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.boton button {
-    width: 30%;
-}

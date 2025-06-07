@@ -56,9 +56,6 @@ export class DialogEditarReservaComponent implements OnInit {
     this.getAllMesas().subscribe({
       next: () => {
         // // Busca las reservas
-        // this.reservas = this.data.listaReservas // Busca las reservas pendientes del usuario
-        // this.cantidad = this.data.reserva.cant_personas
-        // this.fechaHora = this.data.reserva.fechaHora
         this.detectarCambios()
         this.cargarFormulario()
         this.mesaSeleccionada = this.mesas.find(
@@ -85,9 +82,7 @@ export class DialogEditarReservaComponent implements OnInit {
   }
 
   detectarCambios() {
-    // this.mesaSeleccionada = this.mesas.find(
-    //   (m) => m.id_mesa === this.data.reserva.id_reserva
-    // )
+
     // Controla si hubo cambios en el input de hora
     this.formulario.get('fechaHora')?.valueChanges.subscribe({
       next: (valor) => {
@@ -128,7 +123,6 @@ export class DialogEditarReservaComponent implements OnInit {
         fecha: moment(reserva.fecha, 'DD/MM/yyyy', false).format(), // Forgiving mode (los formatos de fechas son distintos)
         hora: reserva.hora
       },
-      // mesa: reserva.id_mesa
       mesa: reserva.id_mesa
     })
   }

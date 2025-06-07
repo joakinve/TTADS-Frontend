@@ -232,26 +232,6 @@ export class PedidosDialogComponent implements OnInit {
     control?.setValue(productoSeleccionado.precio)
   }
 
-  // getValue(controlName: string, index: number) {
-  //   return this.productos.at(index).get(controlName)?.value
-  // }
-
-  // calculaMonto() {
-  //   if (!this.data.editar) {
-  //     let monto = 0
-  //     this.productos.controls.forEach((p) => {
-  //       const subtotal = p.get('precio')?.value * p.get('cant_selecc')?.value
-  //       p.get('subtotal')?.setValue(subtotal)
-  //       monto += p.get('subtotal')?.value
-  //     })
-  //     this.formulario.controls.montoImporte.setValue(monto)
-  //   } else {
-  //     this.formulario.controls.montoImporte.setValue(
-  //       this.data.elemento.montoImporte
-  //     )
-  //   }
-  // }
-
   calculaMonto() {
     let monto = 0
     this.productos.controls.forEach((p) => {

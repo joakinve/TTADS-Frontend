@@ -29,14 +29,6 @@
 
 .titulo-campo { color: #f7bd00 }
 
-.botones {
-  display: flex;
-  justify-content: center;
-  padding: 5%;
-}
-
-.boton { margin-right: 10px }
-
 @media only screen and (min-width: 992px) {
   .titulo {
     font-size: 35px;

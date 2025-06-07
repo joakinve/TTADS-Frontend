@@ -31,14 +31,6 @@
   padding-inline: 7%
 }
 
-.boton {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.boton button {
-  width: 37%;
-}
 
  /* Límite hasta donde se puede desplazar la barra  */
 ::-webkit-scrollbar-track {

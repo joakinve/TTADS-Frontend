@@ -2,7 +2,7 @@
   <pa-boton-volver [titulo]="'Productos'"></pa-boton-volver>
   <div class="tabla">
     <pa-tabla
-      class="tabla-pc"
+      class="display-desktop"
       [tableData]="datosTabla" 
       [tableColumns]="columnasPC" 
       [isPaginator]="false"
@@ -11,7 +11,7 @@
       [confirmDialogMsg]="msgConfirmacion"
     ></pa-tabla>
     <pa-tabla
-      class="tabla-celu" 
+      class="display-phone" 
       [tableData]="datosTabla" 
       [tableColumns]="columnasCelu" 
       [isPaginator]="false"
@@ -21,7 +21,7 @@
     ></pa-tabla>
   </div>
   
-  <div class="boton">
+  <div class="d-flex justify-content-center">
     <button class="submit" type="submit" mat-raised-button color="primary" (click)="onAdd()">
       Agregar producto (+)
     </button>

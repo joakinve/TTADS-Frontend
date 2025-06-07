@@ -36,13 +36,6 @@ export class DialogEditarPerfilComponent implements OnInit {
         Validators.maxLength(20)
       ]
     })
-    // confirmarContrasenia: new FormControl('', {
-    //   validators: [
-    //     Validators.required,
-    //     Validators.minLength(6),
-    //     Validators.maxLength(20)
-    //   ]
-    // })
   })
 
   ngOnInit() {

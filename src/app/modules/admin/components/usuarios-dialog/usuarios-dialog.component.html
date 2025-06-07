@@ -4,7 +4,7 @@
   <div mat-dialog-content class="reserva">
     <div class="reserva">
       <form [formGroup]="formulario" class="reserva-content" (submit)="onSubmit()">
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
           <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input">
             <mat-label>Nombre</mat-label>
             <input matInput type="text" formControlName="nombre">
@@ -22,7 +22,7 @@
           </mat-form-field>
         </div>
 
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
           <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input">
             <mat-label>Email</mat-label>
             <input matInput type="email" formControlName="email">
@@ -48,7 +48,7 @@
           </mat-form-field>
         </div>
 
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
           <mat-form-field appearance="fill" [hideRequiredMarker]="data.editar" class="reserva-input">
             <mat-label style="font-size: 14px">Fecha Nacimiento</mat-label>
             <input matInput formControlName="fechaNacimiento"
@@ -71,7 +71,7 @@
           </mat-form-field>
         </div>
 
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
           <mat-form-field [hideRequiredMarker]="data.editar" class="reserva-input">
             <mat-label>Dirección</mat-label>
             <input type="text" matInput formControlName="direccion">
@@ -89,7 +89,7 @@
           </mat-form-field>
         </div>
 
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
           <mat-form-field appearance="fill" [hideRequiredMarker]="data.editar" class="reserva-input">
             <mat-label>Rol</mat-label>
             <mat-select formControlName="rol">
@@ -115,16 +115,16 @@
           </mat-form-field>
         </div>
 
-        <div class="filaFormulario">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;">
           <mat-checkbox class="reserva-input dialog-checkbox" formControlName="isConfirmado">¿El usuario está confirmado?</mat-checkbox>
         </div>
-        <div class="filaFormulario" *ngIf="data.editar">
+        <div class="d-flex flex-row justify-content-between align-items-center" style="padding-inline: 2%;" *ngIf="data.editar">
           <mat-checkbox class="reserva-input dialog-checkbox"
             formControlName="cambiarPass"
           >¿Cambiar contraseña?</mat-checkbox>
         </div>
 
-        <div class="boton">
+        <div class="d-flex justify-content-evenly">
           <button type="submit" mat-raised-button color="primary">Confirmar</button>
           <button type="button" mat-raised-button color="warn" (click)="onNoClick()">Cancelar</button>
         </div>

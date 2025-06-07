@@ -30,3 +30,31 @@ body { margin: 0; font-family: 'Oswald', sans-serif; }
 a:link, a:visited {
   text-decoration: none;
 }
+
+.boton button {
+  width: 30%;
+}
+
+.bg-dark-custom {
+  background-color: rgb(61, 61, 61) !important;
+}
+
+.display-desktop {
+  display: none ;
+}
+
+@media (min-width: 992px) {
+  .display-desktop {
+    display: block !important;
+  }
+}
+
+.display-phone {
+  display: none !important;;
+}
+
+@media (max-width: 991px) {
+  .display-phone {
+    display: block !important;
+  }
+}
