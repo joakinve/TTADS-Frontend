@@ -138,6 +138,6 @@ Este proyecto está bajo la licencia MIT.
 Desarrollado por: 
 * [Gonzalo Castillo](https://github.com/Gonza077)
 * [Juan Frontons](https://github.com/Jufron97)
-* [Joaquín Vedoya](https://github.com/joakinve)
+* [Joaquin Vedoya](https://github.com/joakinve)
 
 ---
