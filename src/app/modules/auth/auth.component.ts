@@ -1,9 +1,10 @@
-import { Component } from '@angular/core'
+import { Component, ViewEncapsulation } from '@angular/core'
 
 @Component({
   selector: 'pa-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  styleUrls: ['./auth.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class AuthComponent {
   authOption = 1 // Por defecto 1: Login / 2: Register / 3: Reset Password

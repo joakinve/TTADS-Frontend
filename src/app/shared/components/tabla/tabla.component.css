@@ -49,29 +49,45 @@
 }
 
 @media only screen and (min-width: 992px) {
-.tabla {
-  font-size: 16px
-}
+  .tabla {
+    font-size: 16px
+  }
 
-.boton-c {
-  width: 217px;
-}
+  .boton-c {
+    width: 217px;
+  }
 
-/* Hace referencia a los botones de +1 y -1  */
-.botones-carta .boton {
-  width: 48px;
-  height: 48px;
-}
+  /* Hace referencia a los botones de +1 y -1  */
+  .botones-carta .boton {
+    width: 48px;
+    height: 48px;
+  }
 
-.edit-delete-celular {
-  display: none;
-}
+  .edit-delete-celular {
+    display: none;
+  }
 
-.edit-delete-pc {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-content: center;
-}
+  .edit-delete-pc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+  }
+
+  th {
+     width: auto;
+  }
 } 
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  width: 400px;
+}

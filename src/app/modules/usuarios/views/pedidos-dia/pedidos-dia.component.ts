@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewEncapsulation } from '@angular/core'
 import * as moment from 'moment'
 import 'moment/locale/es'
 
@@ -15,7 +15,8 @@ import { ResumenesService } from 'src/app/modules/carta/services/resumenes.servi
 @Component({
   selector: 'pa-pedidos-dia',
   templateUrl: './pedidos-dia.component.html',
-  styleUrls: ['./pedidos-dia.component.css']
+  styleUrls: ['./pedidos-dia.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class PedidosDiaComponent implements OnInit {
   pedidos: PedidoDia[] = []

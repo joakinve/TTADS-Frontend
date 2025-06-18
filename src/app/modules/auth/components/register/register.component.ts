@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core'
+import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { MatDialog } from '@angular/material/dialog'
 import { Router } from '@angular/router'
@@ -8,7 +8,8 @@ import { DialogComponent } from '@pa/shared/components'
 @Component({
   selector: 'pa-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class RegisterComponent {
   maxDate = new Date(

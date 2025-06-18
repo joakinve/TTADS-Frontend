@@ -44,18 +44,18 @@ a.seleccionado{
 }
 
 /* Texto de la opción(item) seleccionada */
-::ng-deep a.seleccionado .mdc-list-item__primary-text {
+ a.seleccionado .mdc-list-item__primary-text {
   font-weight: 600;
   color: rgb(255, 255, 255) !important
 }
 
 /* Texto por defecto de todos los items de la lista */
-::ng-deep .mdc-list-item__primary-text {
+ .mdc-list-item__primary-text {
   color: #f7bd00 !important
 }
 
 /* Item de la lista cuando pasas el mouse */
-::ng-deep .mdc-list-item:hover {
+ .mdc-list-item:hover {
   background-color: rgb(255, 255, 255, 0.2);
 }
 
@@ -65,7 +65,7 @@ a.seleccionado{
 }
 
 /* Color de la letra del cerrar sesión cuando pasas el mouse */
-::ng-deep .logout:hover .mdc-list-item__primary-text { 
+ .logout:hover .mdc-list-item__primary-text { 
   color: rgb(255, 255, 255) !important;
   font-weight: 600;
 }

@@ -73,7 +73,7 @@
   color: white;
 }
 
-::ng-deep mat-expansion-panel mat-expansion-panel-header .mat-expansion-indicator::after {
+mat-expansion-panel mat-expansion-panel-header .mat-expansion-indicator::after {
   /* justify-content: center; */
   color: white;
 }

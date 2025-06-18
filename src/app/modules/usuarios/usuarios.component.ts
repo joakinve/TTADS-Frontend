@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, ViewEncapsulation } from '@angular/core'
 import { AuthService } from '../auth/services/auth.service'
 import { CookieService } from 'ngx-cookie-service'
 import { MediaMatcher } from '@angular/cdk/layout'
@@ -6,7 +6,8 @@ import { MediaMatcher } from '@angular/cdk/layout'
 @Component({
   selector: 'pa-usuarios',
   templateUrl: './usuarios.component.html',
-  styleUrls: ['./usuarios.component.css']
+  styleUrls: ['./usuarios.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class UsuariosComponent {
   mostrarBarra!: boolean

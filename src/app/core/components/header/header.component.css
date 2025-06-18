@@ -18,14 +18,6 @@
   height: 60px;
 }
 
-::ng-deep .celular {
-  background-color: rgb(25, 25, 25);
-}
-
-::ng-deep .celular .mat-mdc-button:not(:disabled) {
-  color: #fff !important;
-}
-
 .pc {
   display: none;
 }

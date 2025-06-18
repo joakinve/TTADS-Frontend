@@ -33,10 +33,6 @@ a:link, a:visited {
 
 .tabla {
   padding: 1%;
-  padding-bottom: 8%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-direction: column;
 }
 
@@ -45,6 +41,7 @@ a:link, a:visited {
 }
 
 @media only screen and (min-width: 992px) {
+
   .tabla-celu {
     display: none;
   }
@@ -71,3 +68,13 @@ a:link, a:visited {
   align-items: center;
   padding-inline: 2%;
 }
+
+
+.celular{
+  background-color: rgb(25, 25, 25) !important;
+}
+
+.celular .mat-mdc-button:not(:disabled) {
+  color: #fff !important;
+}
+

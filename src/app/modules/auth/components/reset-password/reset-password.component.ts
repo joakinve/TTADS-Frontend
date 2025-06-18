@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core'
+import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { MatDialog } from '@angular/material/dialog'
 
@@ -8,7 +8,8 @@ import { DialogComponent } from '@pa/shared/components'
 @Component({
   selector: 'pa-reset-password',
   templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.css']
+  styleUrls: ['./reset-password.component.css'],
+  encapsulation : ViewEncapsulation.None
 })
 export class ResetPasswordComponent {
   formulario = new FormGroup({
