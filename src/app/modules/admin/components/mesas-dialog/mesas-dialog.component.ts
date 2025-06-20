@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
-import { MesaForm, MesaPOST } from '@pa/mesas/models'
-import { MesasService } from '@pa/mesas/services'
+import { MesaForm, MesaPOST } from 'src/app/modules/mesas/models/mesa'
+import { MesasService } from 'src/app/modules/mesas/services/mesas.service'
 
 @Component({
   selector: 'pa-mesas-dialog',

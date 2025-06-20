@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core'
 import * as moment from 'moment'
 import 'moment/locale/es'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { UsuariosService } from '@pa/usuarios/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { UsuariosDialogComponent } from '../../components/usuarios-dialog/usuarios-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { UsuarioTabla } from 'src/app/modules/usuarios/models/usuarios'
 import { BreakpointService } from '../../services/breakpoint.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { UsuariosService } from 'src/app/modules/usuarios/services/usuarios.service'
 
 @Component({
   selector: 'pa-usuarios',

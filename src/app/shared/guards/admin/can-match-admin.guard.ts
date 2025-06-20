@@ -1,6 +1,6 @@
 import { inject } from '@angular/core'
 import { CanMatchFn, Router } from '@angular/router'
-import { AuthService } from '@pa/auth/services'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
 
 // canMatch (Se usa en el archivo app.routing) ≈ canLoad -> Valida si se carga el modulo que implementa este guard (TRUE => carga el modulo)
 export const canMatchAdminGuard: CanMatchFn = () => {

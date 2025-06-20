@@ -4,17 +4,12 @@ import 'moment/locale/es'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
 import { Observable, map } from 'rxjs'
-import { UsuariosService } from '@pa/usuarios/services'
-import { MesasService } from '@pa/mesas/services'
-import {
-  ReservaData,
-  ReservaForm,
-  ReservaPOST,
-  ReservaTabla
-} from '@pa/reservas/models'
-import { ReservaDataDialog } from '@pa/admin/models'
-import { Mesa } from '@pa/mesas/models'
-import { Usuario } from '@pa/usuarios/models'
+import { ReservaDataDialog } from '../../models/adminDataDialog'
+import { ReservaData, ReservaForm, ReservaPOST, ReservaTabla } from 'src/app/modules/reservas/models/reserva'
+import { Mesa } from 'src/app/modules/mesas/models/mesa'
+import { MesasService } from 'src/app/modules/mesas/services/mesas.service'
+import { Usuario } from 'src/app/modules/usuarios/models/usuarios'
+import { UsuariosService } from 'src/app/modules/usuarios/services/usuarios.service'
 
 @Component({
   selector: 'pa-reservas-dialog',

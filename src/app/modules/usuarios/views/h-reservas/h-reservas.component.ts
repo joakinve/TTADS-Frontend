@@ -3,9 +3,9 @@ import * as moment from 'moment'
 import 'moment/locale/es'
 
 import { UsuariosService } from '../../services/usuarios.service'
-import { AuthService } from '@pa/auth/services'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
 
 @Component({
   selector: 'pa-h-reservas',

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core'
 import * as moment from 'moment'
 import 'moment/locale/es'
-import { TableColumn } from '@pa/shared/models'
-import { PedidosService } from '@pa/carta/services'
 import { map } from 'rxjs'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { PedidosService } from '../carta/services/pedidos.service'
 
 @Component({
   selector: 'pa-pedidos',

@@ -4,9 +4,9 @@ import 'moment/locale/es'
 
 import { map } from 'rxjs'
 import { UsuariosService } from '../../services/usuarios.service'
-import { AuthService } from '@pa/auth/services'
-import { TableColumn } from '@pa/shared/models'
 import { PedidoDia } from 'src/app/modules/pedidos/models'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
 
 interface Productos {
   id_producto: number

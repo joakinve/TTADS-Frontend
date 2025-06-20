@@ -1,9 +1,8 @@
 import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/core'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { MatDialog } from '@angular/material/dialog'
-
-import { AuthService } from '@pa/auth/services'
-import { DialogComponent } from '@pa/shared/components'
+import { AuthService } from '../../services/auth.service'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 
 @Component({
   selector: 'pa-reset-password',

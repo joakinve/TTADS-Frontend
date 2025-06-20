@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core'
 import { map } from 'rxjs'
 import { UsuariosService } from '../../services/usuarios.service'
-import { AuthService } from '@pa/auth/services'
-import { TableColumn } from '@pa/shared/models'
 import { MenuDataDialog } from '../../models/menuDataDialog'
 import { MatDialog } from '@angular/material/dialog'
-import { PedidosService } from '@pa/carta/services'
 import { MenuesdialogComponent } from '../../components/menuesdialog/menuesdialog.component'
-import { MenuesService } from '@pa/admin/services'
-import { DialogComponent } from '@pa/shared/components'
 import { CrearMenuDialogComponent } from '../../components/crear-menu-dialog/crear-menu-dialog.component'
 import { MenuTabla } from 'src/app/modules/admin/views/menues/models'
-import { AdminDataDialog } from '@pa/admin/models'
+import { AdminDataDialog } from 'src/app/modules/admin/models/adminDataDialog'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { PedidosService } from 'src/app/modules/carta/services/pedidos.service'
+import { MenuesService } from 'src/app/modules/admin/services/menues.service'
 
 @Component({
   selector: 'pa-menues',

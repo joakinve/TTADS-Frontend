@@ -3,14 +3,14 @@ import * as moment from 'moment'
 import 'moment/locale/es'
 
 import { UsuariosService } from '../../services/usuarios.service'
-import { AuthService } from '@pa/auth/services'
 import { map } from 'rxjs'
 import { CookieService } from 'ngx-cookie-service'
-import { DialogComponent } from '@pa/shared/components'
 import { MatDialog } from '@angular/material/dialog'
 import { ResumenPOST } from '../../models/resumenes'
 import { PedidoDia } from 'src/app/modules/pedidos/models'
 import { ResumenesService } from 'src/app/modules/carta/services/resumenes.service'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 
 @Component({
   selector: 'pa-pedidos-dia',

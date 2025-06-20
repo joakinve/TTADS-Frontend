@@ -3,16 +3,17 @@ import * as moment from 'moment'
 import 'moment/locale/es'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 
-import { ReservasService } from '@pa/reservas/services'
-import { MesasService } from '@pa/mesas/services'
-import { IMesa, TableColumn } from '@pa/shared/models'
-import { ReservaData, ReservaPOST, ReservaTabla } from '@pa/reservas/models'
 import { map } from 'rxjs'
-import { DialogComponent } from '@pa/shared/components'
 import { MatDialog } from '@angular/material/dialog'
 import { DialogEditarReservaComponent } from './components/dialog-editar-reserva/dialog-editar-reserva.component'
 import { AuthService } from '../auth/services/auth.service'
 import { UsuariosService } from '../usuarios/services/usuarios.service'
+import { ReservasService } from './services/reservas.service'
+import { IMesa } from 'src/app/shared/models/IMesa'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { ReservaData, ReservaPOST, ReservaTabla } from './models/reserva'
+import { MesasService } from '../mesas/services/mesas.service'
 
 moment.locale('es')
 

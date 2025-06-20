@@ -1,6 +1,6 @@
 import { inject } from '@angular/core'
 import { CanActivateChildFn, Router } from '@angular/router'
-import { AuthService } from '@pa/auth/services'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
 
 // canActivateChild -> Valida la continuidad de la navegación a las páginas hijas de una determinada página que implemente este guard (TRUE => seguir navegando)
 export const canActivateChildAuthGuard: CanActivateChildFn = () => {

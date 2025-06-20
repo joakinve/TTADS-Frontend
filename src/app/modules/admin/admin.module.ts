@@ -6,9 +6,6 @@ import { AdminComponent } from './admin.component'
 import { CardAdminComponent } from './components/card-admin/card-admin.component'
 import { BotonVolverComponent } from './components/boton-volver/boton-volver.component'
 
-// Shared
-import { ComponentsModule, MaterialModule } from '@pa/shared/modules'
-
 // Views
 import { UsuariosComponent } from './views/usuarios/usuarios.component'
 import { ProductosComponent } from './views/productos/productos.component'
@@ -36,6 +33,8 @@ import { ResumenesComponent } from './views/resumenes/resumenes.component'
 
 import { ReactiveFormsModule } from '@angular/forms'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { ComponentsModule } from 'src/app/shared/modules/components/components.module'
+import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 
 const modules = [ComponentsModule, MaterialModule, FontAwesomeModule]
 const views = [

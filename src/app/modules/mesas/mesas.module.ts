@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common'
 
 import { MesasRoutingModule } from './mesas-routing.module'
 import { MesasComponent } from './mesas.component'
+import { ComponentsModule } from 'src/app/shared/modules/components/components.module'
+import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 
-import { ComponentsModule, MaterialModule } from '@pa/shared/modules'
 
 @NgModule({
   declarations: [MesasComponent],

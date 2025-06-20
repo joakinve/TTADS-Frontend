@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core'
 import * as moment from 'moment'
 import 'moment/locale/es'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { PedidosService } from '@pa/carta/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { PedidosDialogComponent } from '../../components/pedidos-dialog/pedidos-dialog.component'
 import { PedidoTabla } from 'src/app/modules/pedidos/models/pedido'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { BreakpointService } from '../../services/breakpoint.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { PedidosService } from 'src/app/modules/carta/services/pedidos.service'
 
 @Component({
   selector: 'pa-pedidos',

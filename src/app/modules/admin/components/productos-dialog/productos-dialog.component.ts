@@ -1,12 +1,12 @@
 import { Component, Inject, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
-import { CartaService } from '@pa/carta/services'
 import { map } from 'rxjs'
 import {
   ProductoForm,
   ProductoPOST
 } from '../../views/productos/models/producto'
+import { CartaService } from 'src/app/modules/carta/services/carta.service'
 
 @Component({
   selector: 'pa-productos-dialog',

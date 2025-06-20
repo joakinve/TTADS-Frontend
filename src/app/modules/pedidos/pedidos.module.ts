@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common'
 
 import { PedidosRoutingModule } from './pedidos-routing.module'
 import { PedidosComponent } from './pedidos.component'
+import { ComponentsModule } from 'src/app/shared/modules/components/components.module'
+import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 
-import { ComponentsModule, MaterialModule } from '@pa/shared/modules'
 
 @NgModule({
   declarations: [PedidosComponent],

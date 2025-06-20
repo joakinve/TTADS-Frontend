@@ -5,21 +5,22 @@ import {
   Inject,
   OnInit
 } from '@angular/core'
-import { IMesa, TableColumn } from '@pa/shared/models'
 import { ProductosService } from '../../services/productos.service'
 import { map } from 'rxjs/operators'
 import { PedidosService } from '../../services/pedidos.service'
 import { ActivatedRoute } from '@angular/router'
-import { MesasService } from '@pa/mesas/services'
 import { PedidoPOST } from 'src/app/modules/pedidos/models/pedido'
-import { AuthService } from '@pa/auth/services'
-import { PromocionesService } from '@pa/admin/services'
 import { MatDialog } from '@angular/material/dialog'
 import { DialogDetalleProductoComponent } from '../../components/dialog-detalle-producto/dialog-detalle-producto.component'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { DialogComponent } from '@pa/shared/components'
 import { CurrencyPipe, DOCUMENT } from '@angular/common'
 import { DialogConfirmPedidoComponent } from '../../components/dialog-confirm-pedido/dialog-confirm-pedido.component'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { IMesa } from 'src/app/shared/models/IMesa'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { MesasService } from 'src/app/modules/mesas/services/mesas.service'
+import { PromocionesService } from 'src/app/modules/admin/services/promociones.service'
 
 @Component({
   selector: 'pa-productos',

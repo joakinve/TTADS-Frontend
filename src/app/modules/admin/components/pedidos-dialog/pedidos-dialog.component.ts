@@ -7,9 +7,6 @@ import {
   Validators
 } from '@angular/forms'
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
-import { ProductosService } from '@pa/carta/services'
-import { MesasService } from '@pa/mesas/services'
-import { UsuariosService } from '@pa/usuarios/services'
 import { map } from 'rxjs'
 import {
   PedidoForm,
@@ -17,6 +14,9 @@ import {
   Producto
 } from 'src/app/modules/pedidos/models/pedido'
 import { PromocionesService } from '../../services/promociones.service'
+import { MesasService } from 'src/app/modules/mesas/services/mesas.service'
+import { UsuariosService } from 'src/app/modules/usuarios/services/usuarios.service'
+import { ProductosService } from 'src/app/modules/carta/services/productos.service'
 
 @Component({
   selector: 'pa-pedidos-dialog',

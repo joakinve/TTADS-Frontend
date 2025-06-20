@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { PageNotFoundComponent } from '@pa/core/components'
+
 import { canMatchAuthGuard } from './shared/guards/auth/can-match-auth.guard'
 import { canMatchMozoGuard } from './shared/guards/mozo/can-match-mozo.guard'
 import { canMatchUsuarioGuard } from './shared/guards/usuario/can-match-usuario.guard'
 import { canMatchAdminGuard } from './shared/guards/admin/can-match-admin.guard'
+import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component'
 
 const routes: Routes = [
   {

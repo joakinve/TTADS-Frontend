@@ -6,8 +6,10 @@ import { ReservasRoutingModule } from './reservas-routing.module'
 import { ReservasComponent } from './reservas.component'
 
 // Shared
-import { ComponentsModule, MaterialModule } from '@pa/shared/modules'
+
 import { DialogEditarReservaComponent } from './components/dialog-editar-reserva/dialog-editar-reserva.component'
+import { ComponentsModule } from 'src/app/shared/modules/components/components.module'
+import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 
 const modules = [ComponentsModule, MaterialModule]
 

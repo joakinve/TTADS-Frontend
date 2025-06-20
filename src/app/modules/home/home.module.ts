@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common'
 import { HomeRoutingModule } from './home-routing.module'
 import { HomeComponent } from './home.component'
 // Views
-import { AboutComponent, FaqComponent } from '@pa/home/views'
+
 import { CarruselComponent } from './carrusel/carrusel.component'
-import { MaterialModule } from '@pa/shared/modules'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { AboutComponent } from './views/about/about.component'
+import { FaqComponent } from './views/faq/faq.component'
+import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 
 @NgModule({
   declarations: [

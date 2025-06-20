@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core'
 import * as moment from 'moment'
 import 'moment/locale/es'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { PromocionesService } from '@pa/admin/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { PromocionesDialogComponent } from '../../components/promociones-dialog/promociones-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { PromocionTabla } from './models/promocion'
 import { BreakpointService } from '../../services/breakpoint.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { PromocionesService } from '../../services/promociones.service'
 
 @Component({
   selector: 'pa-promociones',

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { RolesService } from '@pa/admin/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { RolesDialogComponent } from '../../components/roles-dialog/roles-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { CategoriaTabla } from '../categorias/models'
 import { RolTabla } from './models'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { RolesService } from '../../services/roles.service'
 
 @Component({
   selector: 'pa-roles',

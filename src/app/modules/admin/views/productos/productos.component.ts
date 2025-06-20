@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { ProductosService } from '@pa/carta/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { ProductosDialogComponent } from '../../components/productos-dialog/productos-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { ProductoPOST, ProductoTabla } from './models/producto'
 import { BreakpointService } from '../../services/breakpoint.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { ProductosService } from 'src/app/modules/carta/services/productos.service'
 
 @Component({
   selector: 'pa-productos',

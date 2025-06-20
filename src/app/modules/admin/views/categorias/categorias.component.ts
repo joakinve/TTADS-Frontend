@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
 import { CategoriasService } from '../../services/categorias.service'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { CategoriasDialogComponent } from '../../components/categorias-dialog/categorias-dialog.component'
 import { CategoriaTabla } from './models'
 import { AdminDataDialog } from '../../models/adminDataDialog'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 
 @Component({
   selector: 'pa-categorias',

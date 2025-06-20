@@ -5,9 +5,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
 import { Observable, map } from 'rxjs'
-import { MesasService } from '@pa/mesas/services'
-import { ReservaPOST, ReservaTabla } from '@pa/reservas/models'
-import { IMesa } from '@pa/shared/models'
+import { IMesa } from 'src/app/shared/models/IMesa'
+import { ReservaPOST, ReservaTabla } from '../../models/reserva'
+import { MesasService } from 'src/app/modules/mesas/services/mesas.service'
+
 
 @Component({
   selector: 'pa-dialog-editar-reserva',

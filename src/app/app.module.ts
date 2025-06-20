@@ -16,17 +16,17 @@ import { MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 // Core
-import {
-  HeaderComponent,
-  FooterComponent,
-  PageNotFoundComponent
-} from '@pa/core/components'
 
 // Shared
-import { ComponentsModule, MaterialModule } from '@pa/shared/modules'
+
 import { TokenInterceptorService } from './shared/services/token-interceptor.service'
 
 import { CookieService } from 'ngx-cookie-service'
+import { HeaderComponent } from './core/components/header/header.component'
+import { FooterComponent } from './core/components/footer/footer.component'
+import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component'
+import { ComponentsModule } from './shared/modules/components/components.module'
+import { MaterialModule } from './shared/modules/material/material.module'
 
 // Registra los datos de localización
 registerLocaleData(localeEsAr)

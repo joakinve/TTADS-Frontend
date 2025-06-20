@@ -6,12 +6,14 @@ import { CartaComponent } from './carta.component'
 import { CardTipoProductoComponent } from './components/card-tipo-producto/card-tipo-producto.component'
 
 // Shared
-import { ComponentsModule, MaterialModule } from '@pa/shared/modules'
+
 
 import { ProductosComponent } from './views/productos/productos.component'
 import { DialogDetalleProductoComponent } from './components/dialog-detalle-producto/dialog-detalle-producto.component'
 import { DialogConfirmPedidoComponent } from './components/dialog-confirm-pedido/dialog-confirm-pedido.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { ComponentsModule } from 'src/app/shared/modules/components/components.module'
+import { MaterialModule } from 'src/app/shared/modules/material/material.module'
 
 const modules = [ComponentsModule, MaterialModule, FontAwesomeModule]
 @NgModule({

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { MesasService } from '@pa/mesas/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { MesasDialogComponent } from '../../components/mesas-dialog/mesas-dialog.component'
-import { MesaTabla } from '@pa/mesas/models'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { BreakpointService } from '../../services/breakpoint.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { MesaTabla } from 'src/app/modules/mesas/models/mesa'
+import { MesasService } from 'src/app/modules/mesas/services/mesas.service'
 
 @Component({
   selector: 'pa-mesas',

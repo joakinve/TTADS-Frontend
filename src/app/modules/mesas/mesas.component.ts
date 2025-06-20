@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core'
-import { MesasService } from './services'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { DialogComponent } from '@pa/shared/components'
 import { MatDialog } from '@angular/material/dialog'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { MesasService } from './services/mesas.service'
 
 @Component({
   selector: 'pa-mesas',

@@ -13,9 +13,9 @@ import {
 } from '@angular/material/dialog'
 import { CookieService } from 'ngx-cookie-service'
 import { map } from 'rxjs'
+import { PromocionesService } from 'src/app/modules/admin/services/promociones.service'
 import { PedidoPOST, Producto } from 'src/app/modules/pedidos/models'
-import { PromocionesService } from '@pa/admin/services'
-import { DialogComponent } from '@pa/shared/components'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 
 @Component({
   selector: 'pa-menuesdialog',

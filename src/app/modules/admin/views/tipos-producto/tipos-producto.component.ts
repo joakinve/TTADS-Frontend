@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
-import { CartaService } from '@pa/carta/services'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { TiposProductoDialogComponent } from '../../components/tipos-producto-dialog/tipos-producto-dialog.component'
 import { TipoProductoPOST, TipoProductoTabla } from './models/tipo-producto'
 import { AdminDataDialog } from '../../models/adminDataDialog'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { CartaService } from 'src/app/modules/carta/services/carta.service'
 
 @Component({
   selector: 'pa-tipos-producto',

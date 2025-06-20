@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import * as moment from 'moment'
 import { map } from 'rxjs'
 import { ResumenesService } from 'src/app/modules/carta/services/resumenes.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
 
 @Component({
   selector: 'pa-resumenes',

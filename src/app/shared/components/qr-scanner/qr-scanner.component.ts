@@ -2,7 +2,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core'
 import jsQR from 'jsqr'
 import { MatDialogRef } from '@angular/material/dialog'
 import { CookieService } from 'ngx-cookie-service'
-import { AuthService } from '@pa/auth/services'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
 
 @Component({
   selector: 'pa-qr-scanner',

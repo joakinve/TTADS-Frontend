@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core'
-import { TableColumn } from '@pa/shared/models'
 import { map } from 'rxjs'
 import { MenuesService } from '../../services/menues.service'
 import { MatDialog } from '@angular/material/dialog'
-import { DialogComponent } from '@pa/shared/components'
 import { MenuesDialogComponent } from '../../components/menues-dialog/menues-dialog.component'
 import { AdminDataDialog } from '../../models/adminDataDialog'
 import { MenuTabla } from './models'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 
 @Component({
   selector: 'pa-menues',

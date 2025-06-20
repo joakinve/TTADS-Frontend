@@ -1,14 +1,14 @@
 import { Component, Inject, OnInit } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
-import { AuthService } from '@pa/auth/services'
-import { ProductosService } from '@pa/carta/services'
-import { UsuariosService } from '@pa/usuarios/services'
 import { map } from 'rxjs'
 import {
   MenuForm,
   MenuPOST
 } from 'src/app/modules/admin/views/menues/models/menu'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { UsuariosService } from '../../services/usuarios.service'
+import { ProductosService } from 'src/app/modules/carta/services/productos.service'
 
 @Component({
   selector: 'pa-crear-menu-dialog',

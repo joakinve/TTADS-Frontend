@@ -4,12 +4,12 @@ import 'moment/locale/es'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog'
 import { map } from 'rxjs'
-import { ProductosService } from '@pa/carta/services'
 import {
   PromocionForm,
   PromocionPOST
 } from '../../views/promociones/models/promocion'
 import { PromocionesService } from '../../services/promociones.service'
+import { ProductosService } from 'src/app/modules/carta/services/productos.service'
 
 @Component({
   selector: 'pa-promociones-dialog',

@@ -3,13 +3,14 @@ import * as moment from 'moment'
 import 'moment/locale/es'
 
 import { UsuariosService } from '../../services/usuarios.service'
-import { AuthService } from '@pa/auth/services'
-import { TableColumn } from '@pa/shared/models'
+
 import { map } from 'rxjs'
 import { MatDialog } from '@angular/material/dialog'
 import { DialogEditarPerfilComponent } from '../../components/dialog-editar-perfil/dialog-editar-perfil.component'
 import { DialogCambiarPasswordComponent } from '../../components/dialog-cambiar-password/dialog-cambiar-password.component'
-import { DialogComponent } from '@pa/shared/components'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { TableColumn } from 'src/app/shared/models/tableColumn/tableColumn'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 
 @Component({
   selector: 'pa-perfil',

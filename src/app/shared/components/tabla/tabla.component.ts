@@ -14,10 +14,12 @@ import { MatTableDataSource } from '@angular/material/table'
 import { MatDialog } from '@angular/material/dialog'
 
 // Shared
-import { TableButtonAction, TableColumn } from '@pa/shared/models'
-import { ConfirmDialogComponent } from '@pa/shared/components'
-import { AuthService } from '@pa/auth/services'
+
 import { faArrowPointer } from '@fortawesome/free-solid-svg-icons'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
+import { TableButtonAction } from '../../models/tableButtonAction/tableButtonAction'
+import { TableColumn } from '../../models/tableColumn/tableColumn'
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component'
 
 @Component({
   selector: 'pa-tabla',

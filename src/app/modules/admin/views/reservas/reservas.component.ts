@@ -4,14 +4,12 @@ import 'moment/locale/es'
 
 import { map, Observable } from 'rxjs'
 import { MatDialog } from '@angular/material/dialog'
-
-import { ReservaDataDialog } from '@pa/admin/models'
-import { ReservasDialogComponent } from '@pa/admin/components'
-import { ReservasService } from '@pa/reservas/services'
-import { ReservaData, ReservaTabla } from '@pa/reservas/models'
-import { DialogComponent } from '@pa/shared/components'
-import { TableColumn } from '@pa/shared/models'
 import { BreakpointService } from '../../services/breakpoint.service'
+import { ReservasService } from 'src/app/modules/reservas/services/reservas.service'
+import { ReservaDataDialog } from '../../models/adminDataDialog'
+import { ReservasDialogComponent } from '../../components/reservas-dialog/reservas-dialog.component'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
+import { ReservaData, ReservaTabla } from 'src/app/modules/reservas/models/reserva'
 
 @Component({
   selector: 'pa-reservas',

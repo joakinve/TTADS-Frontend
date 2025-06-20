@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
-import { AuthService } from '@pa/auth/services'
 import { CookieService } from 'ngx-cookie-service'
+import { AuthService } from 'src/app/modules/auth/services/auth.service'
 import { QrScannerComponent } from 'src/app/shared/components/qr-scanner/qr-scanner.component'
 
 @Component({

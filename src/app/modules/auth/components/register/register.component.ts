@@ -2,9 +2,8 @@ import { Component, EventEmitter, Output, ViewEncapsulation } from '@angular/cor
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { MatDialog } from '@angular/material/dialog'
 import { Router } from '@angular/router'
-
-import { AuthService } from '@pa/auth/services'
-import { DialogComponent } from '@pa/shared/components'
+import { AuthService } from '../../services/auth.service'
+import { DialogComponent } from 'src/app/shared/components/dialog/dialog.component'
 @Component({
   selector: 'pa-register',
   templateUrl: './register.component.html',
