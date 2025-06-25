@@ -82,32 +82,6 @@ export class ReservasComponent implements OnInit {
         error: (err) =>
           console.error(`Código de error ${err.status}: `, err.error.msg)
       })
-    // // Defino las columnas de la tabla Reservas
-    // this.columnasPC = [
-    //   { name: 'Nro.', dataKey: 'id_reserva' },
-    //   { name: 'Fecha y hora', dataKey: 'fechaHora' },
-    //   { name: 'Cantidad de personas', dataKey: 'cant_personas' },
-    //   { name: '¿Está pendiente?', dataKey: 'pendiente' },
-    //   { name: 'Usuario', dataKey: 'usuario' },
-    //   { name: 'Mesa', dataKey: 'mesa' },
-    //   {
-    //     name: ' ',
-    //     dataKey: 'actionButtons',
-    //     editButton: true,
-    //     deleteButton: true
-    //   }
-    // ]
-    // this.columnasCelu = [
-    //   { name: 'Fecha y hora', dataKey: 'fechaHora' },
-    //   { name: 'Cantidad de personas', dataKey: 'cant_personas' },
-    //   { name: 'Usuario', dataKey: 'usuario' },
-    //   {
-    //     name: ' ',
-    //     dataKey: 'actionButtons',
-    //     editButton: true,
-    //     deleteButton: true
-    //   }
-    // ]
   }
 
   get columnas() {
